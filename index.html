@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: "Times New Roman", serif;
+            background-color: white;
+        }
+
+        #profile-card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #5555;
+            border-radius: 12px;
+            background-color: #f5f5f5;
+        }
+
+        #profile-image {
+            width: 300px;
+            height: 300px;
+            object-fit:cover;
+            border-radius: 8px;
+        }
+
+        #profile-name {
+            margin-bottom: 8px;
+        }
+
+        #profile-job {
+            margin-top: 0;
+        }
+
+        .skill {
+            display: inline-block;
+            padding: 7px 12px;
+            margin-right: 5px;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="profile-card">
+        <img id="profile-image" src="C:\Users\LEGION\Downloads\profileimage.jpg" alt="Profile photo">
+        <h2 id="profile-name">Alice John</h2>
+        <p id="profile-job">Frontend Developer</p>
+        <div>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+        </div>
+    </div>
+
+</body>
+</html>
