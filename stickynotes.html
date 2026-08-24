@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sticky Notes</title>
+
+    <style>
+        body {
+            min-height: 110vh;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            background-color: white;
+        }
+
+        #notes-board {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        #header {
+            position: sticky;
+            top: 0;
+            margin: 20px 40px;
+            padding: 10px;
+            color: white;
+            background-color: #111;
+            z-index: 1;
+        }
+
+        .note {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-color: #fff36d;
+            box-shadow: 3px 3px 8px #999;
+        }
+
+        #note-one {
+            top: 60px;
+            left: 60px;
+            transform: rotate(-5deg);
+        }
+
+        #note-two {
+            top: 250px;
+            left: 280px;
+            transform: rotate(5deg);
+        }
+
+        #note-three {
+            top: 500px;
+            left: 75px;
+            transform: rotate(-5deg);
+        }
+
+        #help-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 10px 14px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="notes-board">
+
+        <header id="header"> My Sticky Notes </header>
+
+        <div class="note" id="note-one"> Study JavaScript</div>
+
+        <div class="note" id="note-two"> Meeting @ 4 </div>
+
+        <div class="note" id="note-three"> Fix Bug </div>
+
+        <button id="help-button"> Help </button>
+
+    </div>
+
+</body>
+
+</html>
