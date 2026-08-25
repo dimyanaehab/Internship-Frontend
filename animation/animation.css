@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #9ad3f2;
+}
+
+#game {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    border: 6px solid white;
+    background-color: #228c04c5;
+    box-shadow: 0 0 25px #383737;
+}
+
+#center-line {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    border: 3px dashed white;
+    transform: translateX(50%);
+}
+.paddle {
+    position: absolute;
+    width: 18px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.paddle#left-paddle {
+    left: 20px;
+    top: 145px;
+    animation: move-left-paddle 4s ease-in-out infinite;
+    background-color: rgb(174, 16, 16);
+}
+
+.paddle#right-paddle {
+    right: 20px;
+    top: 235px;
+    animation: move-right-paddle 4s ease-in-out infinite;
+    background-color: rgb(52, 95, 223);
+}
+
+#ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+
+    animation: move-ball 4s linear infinite;
+}
+
+#score {
+    position: relative;
+    margin-bottom: 70px;
+    color: #192954; 
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#score .left-score {
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+#score .right-score {
+    position: absolute;
+    right: 25%;
+    transform: translateX(50%);
+}
+
+@keyframes move-ball {
+    0% {
+        left: 45px;
+        top: 190px;
+    }
+
+    25% {
+        left: 380px;
+        top: 10px;
+    }
+
+    50% {
+        left: 735px;
+        top: 270px;
+    }
+
+    75% {
+        left: 380px;
+        top: 418px;
+    }
+
+    100% {
+        left: 45px;
+        top: 190px;
+    }
+}
+
+@keyframes move-left-paddle {
+    0% {
+        top: 145px;
+    }
+
+    50% {
+        top: 280px;
+    }
+
+    100% {
+        top: 145px;
+    }
+}
+
+@keyframes move-right-paddle {
+    0% {
+        top: 80px;
+    }
+
+    50% {
+        top: 235px;
+    }
+
+    100% {
+        top: 80px;
+    }
+}
