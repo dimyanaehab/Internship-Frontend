@@ -178,3 +178,77 @@ body {
     background-color: rgb(15, 169, 196);
     transform: translateY(-3px);
 }
+
+
+/* RESPONSIVE  */
+
+/* Laptops and small desktops (under 1200px) */
+@media (max-width: 1200px) {
+  .intro h1 {
+    font-size: 40px;
+  }
+}
+
+/* tablets (under 992px) */
+@media (max-width: 992px) {
+  /* 4 columns (25%) --> 2 columns (50%) */
+  .gallery-item {
+    width: 50%;
+  }
+
+  .gallery-container {
+    padding: 20px 20px 60px;
+  }
+
+  /* reset absolute centering so navbar doesn't overlap the logo */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navbar {
+    position: static;
+    transform: none;
+    gap: 20px;
+  }
+}
+
+/* mobile phones (under 600px) */
+@media (max-width: 600px) {
+  /* 2 columns --> 1 full-width column (100%) */
+  .gallery-item {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .image-box {
+    height: 280px; /* slightly shorter image for mobile viewports */
+  }
+
+  .intro {
+    height: auto;
+    padding: 40px 15px 30px;
+  }
+
+  .intro h1 {
+    font-size: 28px; /* smaller text */
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    flex-wrap: wrap; 
+    gap: 12px 18px;
+  }
+
+  .navbar .nav-item {
+    font-size: 13px;
+  }
+
+  .scroll-top-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
