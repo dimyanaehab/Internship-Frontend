@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Fortune Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    button {
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #fortune-text {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Magic Fortune Button 🔮</h1>
+  <button onclick="getFortune()">Get Your Fortune 🔮</button>
+  
+  <p id="fortune-text"></p>
+
+  <script>
+    const fortunes = [
+      "You will dream in JavaScript tonight.",
+      "A missing semicolon will haunt your next build.",
+      "Your code will compile on the very first try.",
+      "A mysterious bug will disappear after a single console.log().",
+      "Git merge conflict? Not today.",
+      "You will soon master the DOM manipulation realm.",
+      "Stack Overflow has already answered your next question."
+    ];
+
+    function getFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      document.getElementById("fortune-text").textContent = fortunes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
