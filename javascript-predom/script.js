@@ -63,3 +63,46 @@ function isPrime (num) {
  }
 
  console.log("Sum of even numbers", evenSum);
+
+ //task 7
+ let arr = [1,2,3,2,4,1,5];
+ let uniqueArr = arr.filter((item,index) => arr.indexOf(item)===index);
+ console.log(uniqueArr);
+
+ //task 8
+ for (let i = 1; i <= 30; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
+
+//task 9
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+console.log(factorial(5)); 
+
+//task 10
+let car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    color: "blue"
+};
+
+for (let key in car) {
+    console.log(`${key}: ${car[key]}`);
+}
