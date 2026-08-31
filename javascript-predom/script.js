@@ -33,3 +33,33 @@ for(let char of str) {
 }
 
 console.log("vowel count:",count);
+
+//task 4
+function isPrime (num) {
+    if (num<=1) return false;
+
+    for(let i=2;i<=Math.sqrt(num);i++) {
+        if (num%i==0)
+            return false;
+    }
+    return true;
+ }
+ console.loh(isPrime(17));
+
+ //task 5
+ function reverseString(str) {
+    return str.split("").reverse().join("");
+ }
+
+ console.log(reverseString("hello"))
+
+ //task 6
+ let nums = [1,2,3,4,5,6];
+ let evenSum = 0;
+ for (let num of nums) {
+    if (num % 2 ===0) {
+        evenSum += num;
+    }
+ }
+
+ console.log("Sum of even numbers", evenSum);
