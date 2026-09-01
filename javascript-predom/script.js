@@ -44,7 +44,7 @@ function isPrime (num) {
     }
     return true;
  }
- console.loh(isPrime(17));
+ console.log(isPrime(17));
 
  //task 5
  function reverseString(str) {
